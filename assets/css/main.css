@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+:root {
+    --color-body: #F3F3F3;
+    --color-card-box-shadow: 1px 2px 10px rgba(0, 0, 0, .2);
+
+    --color-weather-red: #ef9a9a;
+    --color-weather-yellow: #FFF59D;
+    --color-weather-blue: #81D4FA;
+
+    --font-family-body: 'Roboto', sans-serif;
+}
+
+html, body {
+    background: var(--color-body);
+    font-family: var(--font-family-body);
+    box-sizing: padding-box;
+}
+
+.weather__card {
+    background: #fff;
+    width: 500px;
+    height: 250px;
+    margin: 10px;
+    display: inline-block;
+    box-shadow: var(--color-card-box-shadow);
+    transition: all .3s ease-in-out;
+}
+
+.weather__card:hover {
+    transform: scale(1.03);
+}
+
+.weather__card--left {
+    width: 23.5%;
+    height: 250px;
+    float: left;
+}
+
+.weather__card--content {
+    width: 73.5%;
+    height: 250px;
+    padding-top: 20px;
+    margin-left: 3%;
+    float: left;
+}
+
+.weather__card--title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgb(71, 71, 71);
+}
+
+.weather__card--temperature {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: rgb(80, 80, 80);
+}
+
+h4 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+    color: #777;
+    font-weight: 300;
+}
+
+.red {background: var(--color-weather-red);}
+.yellow {background: var(--color-weather-yellow);}
+.blue {background: var(--color-weather-blue);}
+
+.clear {
+    display: table;
+    content: '';
+    clear: both;
+}
+
