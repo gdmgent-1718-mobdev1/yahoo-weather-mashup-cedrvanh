@@ -25,7 +25,7 @@ function App() {
     }
 
     function updateWeatherUI(){
-        if(weatherElement != null && weatherData != undefined) {
+        if(weatherElement != null && weatherData != undefined && weatherData != null && weatherData != undefined && weatherData.length > 0) {
             let tempStr = '';
             weatherData.forEach(function(weather, index) {
                 tempStr += `
@@ -78,13 +78,17 @@ function App() {
             'Sat',
             'Sun'
         ]
-
-        for(var i = 0; i < 2; i++) {
-            var forecastElement = forecast[i];
-            tempStr += `
-                <p>${days[i]}</p>
-                <p>${forecastElement.high}°C - ${forecastElement.low}°C</p>
-            `;
+        if(forecast.length > 0) {
+            for(var i = 0; i < 2; i++) {
+                var forecastElement = forecast[i];
+                tempStr += `
+                    <p>${days[i]}</p>
+                    <p>${forecastElement.high}°C - ${forecastElement.low}°C</p>
+                `;
+            }
+        }
+        else {
+            return false;
         }
         return tempStr;
 
